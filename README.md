@@ -17,12 +17,12 @@ This project features a smooth animated sequence that:
 5. **Stage 5**: Morphs into "NASA" using the same worm font
 6. **Stage 6**: Concludes with the classic NASA insignia
 
-The animation uses the authentic `Nasa.ttf` font file to ensure the text matches NASA's official "worm" logo typography from the 1970s-1990s era.
+The animation uses a "free for personal use" facsimile of NASA's "worm" font created by Daryl Schimmel to recreate the iconic typography from the 1970s-1990s era.
 
 ## 🛠 Technical Details
 
 - **Frontend**: Pure HTML, CSS, and JavaScript
-- **Typography**: Custom `@font-face` loading of `Nasa.ttf`
+- **Typography**: Custom `@font-face` loading of facsimile `Nasa.ttf` font
 - **Animation**: CSS keyframes with precise timing
 - **Hosting**: GitHub Pages
 - **Font Fallbacks**: Inter, Arial Black, sans-serif
@@ -32,7 +32,7 @@ The animation uses the authentic `Nasa.ttf` font file to ensure the text matches
 ```
 wasm-fun/
 ├── index.html          # Main animation page
-├── Nasa.ttf           # Authentic NASA worm font
+├── Nasa.ttf           # NASA worm font facsimile by Daryl Schimmel
 ├── README.md          # This documentation
 └── assets/            # Additional resources
     ├── NASA_logo.svg
@@ -81,7 +81,7 @@ gh api repos/kingdonb/wasm-fun/pages
 
 ## 🎨 Font Integration
 
-The project uses the authentic NASA "worm" font through a custom `@font-face` declaration:
+The project uses a NASA "worm" font facsimile through a custom `@font-face` declaration. The font is a "free for personal use" recreation by Daryl Schimmel, available from [font.download](https://font.download/font/nasa):
 
 ```css
 @font-face {
@@ -123,13 +123,24 @@ To run locally:
 
 3. Visit `http://localhost:8000`
 
-## 📝 Credits
+## 📝 Credits & Legal Disclaimers
 
 - **Concept**: "WASM" not "WebAssembly" - Keep the ASM in WASM
-- **NASA Font**: Authentic NASA "worm" logotype typography
-- **WebAssembly Logo**: Official WebAssembly SVG logo
-- **NASA Insignia**: Official NASA logo from Wikimedia Commons
+- **NASA Font**: Facsimile font by Daryl Schimmel - https://font.download/font/nasa (free for personal use)
+- **WebAssembly Logo**: Used without permission from https://webassembly.org/ (https://webassembly.org/css/webassembly.svg)
+- **NASA Insignia**: Used without permission from https://www.nasa.gov/nasa-brand-center/brand-guidelines/ - **sorry!** ⚠️
+
+### ⚠️ Important Legal Notice
+
+**This project uses NASA logos and branding without authorization.** According to NASA's brand guidelines (https://www.nasa.gov/nasa-brand-center/brand-guidelines/), unauthorized use of NASA logos, insignia, and branding is not permitted. This is a personal, non-commercial project created for fun and educational purposes, but users should be aware that:
+
+- The NASA logos and insignia are protected and their use is restricted
+- This project violates NASA's brand guidelines (sorry!)
+- It's just a cute animation that turned out cool, not intended for any serious commercial use
+- Anyone forking or using this code should consider the legal implications
+
+If you're from NASA and would like this removed, please contact the repository owner.
 
 ## 📄 License
 
-This project is for educational and demonstration purposes. NASA logos and fonts are used under fair use for non-commercial purposes.
+This project is for educational and demonstration purposes only. **Important**: This project uses copyrighted materials without permission, including NASA logos and WebAssembly branding. Use at your own risk and be aware of potential copyright and trademark issues. The font is free for personal use only.
