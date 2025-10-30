@@ -4,7 +4,11 @@ A fun morphing animation that transforms "WASM" into "NASA" using authentic NASA
 
 ## 🚀 Live Demo
 
-**Visit the live animation:** https://kingdonb.github.io/wasm-fun/
+**Status: Currently Offline** 🚫
+
+The GitHub Pages deployment has been temporarily disabled for development and legal compliance review.
+
+<!-- When enabled: https://kingdonb.github.io/wasm-fun/ -->
 
 ## 📖 About
 
@@ -79,6 +83,35 @@ echo '{"source":{"branch":"main","path":"/"}}' | gh api repos/kingdonb/wasm-fun/
 gh api repos/kingdonb/wasm-fun/pages
 ```
 
+## 🚫 Disabling GitHub Pages
+
+To temporarily disable the GitHub Pages deployment (useful during development or for legal compliance):
+
+### Method 1: Via GitHub CLI (Recommended)
+```bash
+# Delete the GitHub Pages site entirely
+gh api repos/kingdonb/wasm-fun/pages -X DELETE
+
+# Verify pages are disabled (should return 404)
+gh api repos/kingdonb/wasm-fun/pages
+# Returns: 404 There isn't a GitHub Pages site here.
+```
+
+### Method 2: Via GitHub Web Interface
+1. Go to repository Settings → Pages
+2. Under "Source", select "None"
+3. Click "Save"
+
+### Re-enabling GitHub Pages
+```bash
+# Re-enable GitHub Pages from main branch
+echo '{"source":{"branch":"main","path":"/"}}' | gh api repos/kingdonb/wasm-fun/pages -X POST --input -
+```
+
+**Note**: The GitHub API does **not** support setting `"source":"none"` - this is not a valid value. The only way to disable Pages via API is to DELETE the entire Pages site, which can then be recreated later.
+
+**Reference**: [GitHub Docs - Deleting a GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/deleting-a-github-pages-site#deleting-your-site-by-changing-the-source)
+
 ## 🎨 Font Integration
 
 The project uses a NASA "worm" font facsimile through a custom `@font-face` declaration. The font is a "free for personal use" recreation by Daryl Schimmel, available from [font.download](https://font.download/font/nasa):
@@ -123,7 +156,18 @@ To run locally:
 
 3. Visit `http://localhost:8000`
 
-## 📝 Credits & Legal Disclaimers
+## � Development History
+
+This project was developed through collaborative AI assistance across multiple platforms:
+
+- **ChatGPT Conversation**: https://chatgpt.com/c/69020ab1-26e8-8331-a4ed-c22e7d6f3954 *(unpublished)*
+  - Initial project conceptualization and basic implementation
+- **Claude Conversation**: https://claude.ai/chat/eae92346-9a0c-4c85-9e05-2be688fa3b37 *(unpublished)*
+  - Advanced enhancements and technical refinements that ChatGPT couldn't resolve
+  - GitHub Pages setup and deployment automation
+  - Font integration and animation timing improvements
+
+## �📝 Credits & Legal Disclaimers
 
 - **Concept**: "WASM" not "WebAssembly" - Keep the ASM in WASM
 - **NASA Font**: Facsimile font by Daryl Schimmel - https://font.download/font/nasa (free for personal use)
